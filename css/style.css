@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+html{
+	background-color: #F0F0F0;
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+}
+html, html > *{
+	height: -webkit-fill-available;
+}
+#content
+{
+	width: 90%;
+	margin: auto;
+}
+body
+{
+	display: flex;
+}
+#i1, #i2, #i3, #i4, #i5{ display: none;}
+
+div#hero{
+		min-height: 500px;
+		max-height: 500px;
+		flex: 1;
+	  user-select: none;
+		background-color: #1c1c1c;
+	}
+
+	div#hero .slide_videos{
+		position: absolute;
+		max-width: 1902px;
+		height: 500px;
+		width: -webkit-fill-available;
+	}
+	 .prev, .next{
+        width: 12%;
+		height: 450px;
+		position: absolute;
+		top:0; 
+		background-color: rgba(88, 88, 88,.2);
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;       
+	}
+	.next{right:0;}
+	.prev{left:0;}
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+	.prev:hover, .next:hover{
+        display: inherit;
+		transition: .3s;
+		background-color: rgba(88, 88, 89,.8);
+		color: #ffffff; 
+	}
+
+div#hero #nav_slide{
+	max-width: 1903px;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	top:480px; 
+	cursor: default;
+	position: sticky;
+	width: fit-content;
+    margin: auto;
+}
+
+#nav_slide .dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: .4s;
+}
+
+#nav_slide .dots:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: .25s
+}
+
+.slide_videos{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five 
+	{z-index: 9; animation: scroll 1s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	opacity:.4;}
+	100%{opacity:1;}
+}
+#burgerMenu{
+	height: 50px;
+	border: solid 1px;
+	background-color: black;
+	border: solid 1px;
+	border-color: black; 
+	color: #ffffff;
+}
+#content{
+	display: flex;
+	flex-basis: auto;
+	flex-flow: column;
+	min-height: 3000px;
+	height: -webkit-fill-available;
+}
+#content >*{
+	min-height: 500px;
+	max-height: 500px;
+	height: -webkit-fill-available;
+}
+#hero{
+
+	border: solid 1px;
+	position: sticky;
+}
+
+#services{
+	flex: 1 ;
+	border: solid 1px;
+}
+#services > p
+{
+	margin-top: 25px;
+    margin-left: 25px;
+}
+#ourTeam{
+	flex: 1;
+}
+
+#ourTeam > *{
+	display: flex;
+	flex: 1;
+	width: -webkit-fill-available;
+	height: 250px;
+}
+
+#teamPictures > * >img{
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	max-height: 70%;
+	height:250px;
+	margin-top: 37px;
+}
+#teamDescription > *{
+	overflow: hidden;
+	text-align: justify;
+	padding: 10px;
+	border: solid 1px;
+}
+#teamPictures >*{
+	border: solid 1px;
+}
+
+#imageProfile1{
+
+	flex: 1;
+
+}
+#imageProfile2{
+
+	flex: 1;
+}
+#imageProfile3{
+
+	flex: 1;
+}
+#descriptionProfile1{
+
+	flex: 1;
+}
+#descriptionProfile2{
+
+	flex: 1;
+}
+#descriptionProfile3{
+	flex: 1;
+}
+#portfolio{
+	display: flex;
+}
+
+#portfolio > *{
+	border: solid 1px;
+	flex: 1;
+}
+#contactUs{
+	display: flex;
+}
+#contactUs >*{
+	border: solid 1px;
+	flex: 1;
+}
+#footer{
+	display: flex;
+	border: solid 1px;
+	background-color: black;
+	border-color: black;
+	color: #ffffff;
+}
+#footer >*{	
+	flex: 1;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	padding: 50px;
+	line-height: normal;
+	text-align: center;
+	margin: auto;
+}
+#map
+{
+	max-width: 50%;
+    display: flex;
+}
+#map > img
+{
+	max-width: -webkit-fill-available;
+	max-height: -webkit-fill-available;
+	max-width: 100%;
+    max-height: 100%;
+}
+#imagePortfolio > img
+{
+	height: -webkit-fill-available;
+	width: -webkit-fill-available;
+    max-width: 100%;
+    max-height: 100%;
+}
